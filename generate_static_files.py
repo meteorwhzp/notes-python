@@ -69,7 +69,7 @@ def convert_to_files(names, to_format):
         p = nbconvert.export(nbconvert.get_exporter(to_format), file_name)
         with open(os.path.join(target_dir, file_name[:-6] + p[1]["output_extension"]), 'w') as f:
             f.write(p[0].encode("utf-8"))
-        print file_name
+        print(file_name)
 
 
 # 转化 HTML 文件：
